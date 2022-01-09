@@ -8,7 +8,4 @@ jobs:
       fail-fast: false
     runs-on: ${{ matrix.platform }}
     steps:
-      - run: Invoke-WebRequest -Uri https://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-minirootfs-3.15.0-x86_64.tar.gz -OutFile alpine.tar.gz
-      - run: Invoke-WebRequest -Uri https://github.com/yuk7/wsldl/releases/download/21082800/wsldl.exe -OutFile wsldl.exe
-      - run: ./wsldl.exe install alpine.tar.gz
-      - run: ./wsldl.exe backup --tgz
+      - run: wsl --help
